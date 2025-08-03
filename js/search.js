@@ -48,6 +48,8 @@ document.addEventListener('click', function(event) {
             !search.contains(event.target) && 
             !icon.contains(event.target)) {
             closeSearch();
+			search.value = "";
+            search.blur();
         }
     }
 });
