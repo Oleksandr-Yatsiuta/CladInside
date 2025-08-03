@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Cinzel';
+    src: url('./fonts/Cinzel/Cinzel-VariableFont_wght.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cinzel1';
+    src: url('./fonts/Cinzel/Cinzel-VariableFont_wght.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cinzel Normal';
+    src: url('./fonts/Cinzel/Cinzel-VariableFont_wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Shadows Into Light';
+    src: url('./fonts/Shadows_Into_Light/ShadowsIntoLight-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}

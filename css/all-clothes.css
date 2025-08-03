@@ -1,0 +1,283 @@
+body{
+    color: white;
+    background-color: #000;
+    margin: 0;
+    font-family: 'Cinzel';
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.image-title{
+    width: 200px;
+}
+
+.fixed-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 94%;
+    border: solid #161616 4px;
+    border-radius: 15px;
+    background-color: #000;
+}
+
+.contain-header{
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+.menu-text{
+    color: #fff;
+}
+
+.search {
+    background-color: #161616;
+    border: solid #161616;
+    border-radius: 6px;
+    width: 200px;
+    height: 25px;
+    color:#fff;
+    font-size: 15px;
+}
+
+.fa-search{
+    position: relative;
+    float: left;
+    z-index: 1;
+    margin-right: -26px;
+    margin-top: 5px;
+    margin-left: 5px;
+    font-size: 21px;
+    color: #5F5F5F;
+}
+
+.fa-search + .search {
+    padding-left: 26px;
+}
+
+.menu-text-click {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-shopping-cart{
+    color: #fff;
+    font-size: 25px;
+}
+
+.elastic li.hide{
+    display: none;
+}
+
+.search-area {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 120px;
+    width: 232px;
+    position: absolute;
+    left: 442px;
+    top: 60px;
+    background-color: gray;
+    display: none;
+}
+
+.all-products{
+    padding-left: 200px;
+    padding-right: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-of-page{
+    margin-top: 100px;
+}
+
+.title{
+    font-size: 35px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.card-img{
+    width: 100%;
+}
+
+.card{
+    width: 310px;
+    margin: 0;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.products{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-stars{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.thing, .stars{
+    font-size: 23px;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.stars{
+    font-size: 25px;
+}
+
+.cost{
+    font-family: 'Shadows Into Light';
+    font-size: 30px;
+}
+
+/* !секция footer */
+.footer{
+    margin-top: 200px;
+    background-color: #161616;
+}
+
+.footer-container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+
+.footer-block2 , .icon-block , .footer-block1{
+    display: flex;
+    padding: 0 20px;
+}
+
+.footer-block1{
+   flex-direction: column;
+   align-items: center;
+   margin-top: 13px;
+}
+
+.footer-block2{
+   border-left: 1px solid gray;
+   border-right: 1px solid gray;
+}
+
+.footer-content{
+   flex-direction: column;
+   display: flex;
+}
+
+.footer-input{
+   display: flex;
+   flex-direction: column;
+}
+
+.footer-title{
+   color: gray;
+}
+
+.footer-block-title{
+   color: white;
+   font-size: 24px;
+   border-bottom: 1px solid gray;
+}
+
+.social-media-footer{
+   margin: 0px;
+}
+
+.icon-block{
+   gap: 15px;
+   margin-top: 10px;
+}
+
+.input-area{
+   margin-top: 10px;
+   border-radius: 7px;
+   font-size: 24px;
+   width: 400px;
+   height: 50px;
+
+}
+
+.send-email{
+   top: -50px;
+   left: 350px;
+   position: relative;
+   background-color: gray;   
+   color: white;
+   padding: 5px;
+   max-width: 40px;
+   font-size: 24px;
+   text-align: center;
+   border-radius: 100%;
+   cursor: pointer;
+}
+
+/* themes button */
+#themes{
+    z-index: 99;
+    position: fixed;
+    bottom: 20px;
+    left: 30px;
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 40px;
+    font-size: 10px;
+    height: 60px;
+    width: 60px;
+}
+
+.fa-sun{
+    width: 50px;
+    height: 50px;
+    color: #fff;
+}
+
+/* !Поисковая система  */
+.elastic li.hide{
+    display: none;
+}
+
+.search-area {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 120px;
+    width: 232px;
+    position: absolute;
+    left: 442px;
+    top: 60px;
+    background-color: gray;
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+    
+    

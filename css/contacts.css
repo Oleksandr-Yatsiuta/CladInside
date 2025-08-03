@@ -1,0 +1,257 @@
+body{
+    color: white;
+    background-color: #000;
+    margin: 0;
+    font-family: 'Cinzel';
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.fixed-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 94%;
+    border: solid #161616 4px;
+    border-radius: 15px;
+    background-color: #000;
+}
+
+.contain-header{
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+.menu-text{
+    color: #fff;
+}
+
+.search {
+    background-color: #161616;
+    border: solid #161616;
+    border-radius: 6px;
+    width: 200px;
+    height: 25px;
+    color:#fff;
+    font-size: 15px;
+}
+
+.fa-search{
+    position: relative;
+    float: left;
+    z-index: 1;
+    margin-right: -26px;
+    margin-top: 5px;
+    margin-left: 5px;
+    font-size: 21px;
+    color: #5F5F5F;
+}
+
+.fa-search + .search {
+    padding-left: 26px;
+}
+
+.menu-text-click {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-shopping-cart{
+    color: #fff;
+    font-size: 25px;
+}
+
+.main-image {
+    width: 500px;
+}
+
+.model {
+    width: 450px;
+}
+
+.container-main {
+    text-align: center;
+    padding: 20px 0;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+/* !Поисковая система  */
+.elastic li.hide{
+    display: none;
+}
+
+.search-area {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 120px;
+    width: 232px;
+    position: absolute;
+    left: 442px;
+    top: 60px;
+    background-color: gray;
+    display: none;
+}
+
+/* начало футера */
+.footer{
+    margin-top: 200px;
+    background-color: #161616;
+}
+
+.footer-container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+
+.footer-block2 , .icon-block , .footer-block1{
+    display: flex;
+    padding: 0 20px;
+}
+
+.footer-block1{
+   flex-direction: column;
+   align-items: center;
+   margin-top: 13px;
+}
+
+.footer-block2{
+   border-left: 1px solid gray;
+   border-right: 1px solid gray;
+}
+
+.footer-content{
+   flex-direction: column;
+   display: flex;
+}
+
+.footer-input{
+   display: flex;
+   flex-direction: column;
+}
+
+.footer-title{
+   color: gray;
+}
+
+.footer-block-title{
+   color: white;
+   font-size: 24px;
+   border-bottom: 1px solid gray;
+}
+
+.social-media-footer{
+   margin: 0px;
+}
+
+.icon-block{
+   gap: 15px;
+   margin-top: 10px;
+}
+
+.input-area{
+   margin-top: 10px;
+   border-radius: 7px;
+   font-size: 24px;
+   width: 400px;
+   height: 50px;
+
+}
+
+.send-email{
+   top: -50px;
+   left: 350px;
+   position: relative;
+   background-color: gray;   
+   color: white;
+   padding: 5px;
+   max-width: 40px;
+   font-size: 24px;
+   text-align: center;
+   border-radius: 100%;
+   cursor: pointer;
+}
+/* конец футера */
+
+main{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.mail{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.phone, .location{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.fa-envelope, .fa-phone, .fa-map{
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+.click-email-icon, .call-icon, .location-icon{
+    color: #fff;
+}
+
+.click-email, .call, .location{
+    color: #fff;
+    font-size: 25px;
+}
+
+.image{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.location-image{
+    width: 500px;
+    height: 400px;
+    border-radius: 30px;
+}
+
+/* themes button */
+#themes{
+    z-index: 99;
+    position: fixed;
+    bottom: 20px;
+    left: 30px;
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 40px;
+    font-size: 10px;
+    height: 60px;
+    width: 60px;
+}
+
+.fa-sun{
+    width: 50px;
+    height: 50px;
+    color: #fff;
+}
