@@ -1,4 +1,22 @@
+@media screen and (max-width: 1140px){
+    /* главная */
+    .main-image{
+        width: 400px;
+    }
+    /* о нас */
+    .about-content{
+        height: 300px;
+    }
+
+    .ab-info{
+        font-size: 24px;
+    }
+}
+
 @media screen and (max-width: 1025px){
+    h1{
+        font-size: 50px;
+    }
     /* адаптив для хедера */
     .contain-header{
         max-width: 1024px;
@@ -21,6 +39,10 @@
         width: 160px;
     }
 
+    .search-area{
+        width: 200px;
+    }
+
     .menu{
         padding-left: 10px;
     }
@@ -35,24 +57,13 @@
     }
 
     /* карусель адаптирована, но есть мелкие фикс */
-    .item{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .name{
-        font-size: 25px;
-        padding: 0;
-    }
 
     .stars{
-        font-size: 23px;
+        font-size: 24px;
     }
 
     .cost{
         font-size: 33px;
-        margin: 0;
     }
 
     /* адаптивы для about us */
@@ -171,21 +182,7 @@
     }
 }
 
-/* подгонка между компом и планшетом */
-@media screen and (max-width: 1140px){
-    /* главная */
-    .main-image{
-        width: 400px;
-    }
-    /* о нас */
-    .about-content{
-        height: 300px;
-    }
 
-    .ab-info{
-        font-size: 24px;
-    }
-}
 
 @media screen and (max-width: 880px){
     .model{
@@ -202,6 +199,28 @@
 
     .main-image{
         width: 370px;
+    }
+
+    .more{
+        padding-left: 0;
+    }
+    .more a{
+        margin-top: 10px;
+        height: 60px;
+    }
+
+    .more h1{
+        padding-left: 30px;
+        font-size: 45px;
+    }
+
+    #mens, #womens, #boys, #girls{
+        padding-left: 30px;
+        font-size: 45px;
+    }
+
+    .title{
+        font-size: 45px;
     }
 
     .footer-block2{
@@ -239,6 +258,19 @@
 }
 
 @media screen and (max-width: 769px){
+    #myBtn{
+        padding: 10px;
+        font-size: 8px;
+    }
+
+    #themes{
+        left: 0px;
+        bottom: 1px;
+    }
+
+    #themes i {
+        font-size: 40px;
+      }
     /* адаптив для хедера */
     .title-image{
         width: 140px;
@@ -250,6 +282,10 @@
 
     .search{
         width: 150px;
+    }
+
+    .search-area{
+        width: 239px;
     }
 
     .home{
@@ -281,25 +317,40 @@
     }
 
     /* адаптивы для карусели */
-    .more a{
-        margin-top: 10px;
-        height: 60px;
-    }
+    
 
-    .more h1{
-        padding-left: 30px;
-        font-size: 45px;
-    }
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center;
+      }
+      
+      .cost {
+        order: 2;
+      }
+      
+      .stars {
+        margin: 0px;
+        order: 1; 
+      }
 
-    #mens, #womens, #boys{
-        padding-left: 30px;
-        font-size: 45px;
-    }
+      .name{
+        text-align: center;
+      }
 
-    .name{
-        font-size: 23px;
-    }
+      .custom-prev, .custom-next{
+        font-size: 50px;
+        top: 30%;
+      }
 
+      .custom-prev{
+        left: -50px;
+      }
+
+      .custom-next{
+        right: -50px;
+      }
     /* адаптивы для about us */
     .about-page-contain{
         width: 100%;
@@ -313,14 +364,7 @@
         font-size: 22px;
     }
 
-    .about-page-contain > .title{
-        padding-left: 30px;
-    }
-
     /* адаптивы для social media */
-    .container > .title{
-        padding-left: 30px;
-    }
 
     .social-content{
         width: 210px;
@@ -388,6 +432,82 @@
 
 /* подгонка между планшетом и телефоном */
 @media screen and (max-width: 730px){
+    .search {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        width: 210px;
+        height: 35px;
+        background-color: #161616;
+        border: 1px solid #161616;
+        border-radius: 6px;
+        color: white;
+        z-index: 10;
+    }
+
+    .search.active {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(0%, -50%) scale(1);
+    }
+
+    .call-icon {
+        display: block;
+    }
+
+    .left-side-header{
+        width: 57%;
+    }
+
+    .image-title{
+        margin-left: 25px;
+        z-index: 41000;
+    }
+    /* !burger */
+
+    .left-side-header {
+        flex-direction: row-reverse;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .burger {
+        width: 30px;
+        height: 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        z-index: 12;
+      }
+      
+      .burger span {
+        display: block;
+        height: 3px;
+        background: white;
+        border-radius: 2px;
+        transition: all 0.3s ease-in-out;
+      }
+      
+      /* Анімація відкриття */
+      .burger_active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      
+      .burger_active span:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .burger_active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+      }
+      
     .model{
         width: 300px;
     }
@@ -437,6 +557,19 @@
 }
 
 @media screen and (max-width: 630px){
+
+    .more > a{
+        height: 50px;
+        font-size: 30px;
+    }
+
+    #mens, #womens, #boys , #girls{
+        font-size: 32px;
+    }
+
+    .title{
+        font-size: 32px;
+    }
     .model{
         width: 270px;
     }
@@ -449,6 +582,22 @@
         width: 300px;
     }
 
+    .about-content{
+        width: 230px;
+        max-height: 180px;
+    }
+
+    .ab-info{
+        font-size: 13px;
+    }
+
+    .title{
+        font-size: 30px;
+        margin: 0;
+    }
+
+
+    /* footer */
     .footer-block2{
         width: 60%;
     }
@@ -491,15 +640,43 @@
         width: 350px;
     }
 
+    .search-area{
+        width: 185px;
+    }
+    
+    .search{
+        width: 155px;
+    }
+
     /* carousel */
+
     #mens, #womens, #boys, #girls{
-        font-size: 32px;
+        font-size: 24px;
     }
 
     .more a{
         margin-left: 20px;
-        font-size: 25px;
+        font-size: 20px;
+        height: 40px;
     }
+
+    .name{
+        font-size: 20px;
+    }
+
+
+    .custom-prev, .custom-next{
+        font-size:40px;
+        top: 30%;
+      }
+
+      .custom-prev{
+        left: -30px;
+      }
+
+      .custom-next{
+        right: -30px;
+      }
 
     /* адаптив для about us */
     .about-content{
@@ -512,7 +689,7 @@
     }
 
     .title{
-        font-size: 30px;
+        font-size: 24px;
         margin: 0;
     }
 
@@ -531,7 +708,7 @@
     }
 
     .footer-block-title{
-        font-size: 11px;
+        font-size: 10px;
     }
     
     .footer-content{
@@ -544,7 +721,7 @@
 
     .under3::after{
         width: 90px;
-        left: 38px;
+        left: 32px;
     }
 
     .under2::after{
@@ -568,21 +745,20 @@
     }
 
     .input-area {
-        border-radius: 22px;
         font-size: 9px;
-        font-family: "Cinzel";
-        width: 100%;
-        height: 30px;
+        width: 90%;
+        height: 25px;
         padding-right: 15px; 
         padding-left: 15px;
         box-sizing: border-box;
+        margin-left: 15px;
     }
     
     .send-email {
         width: 10px;
         height: 10px;
         font-size: 10px;
-        left: 80%;
+        left: 84%;
     }
 
     .footer-inc{
@@ -592,11 +768,30 @@
 
 /* подгонка на телефон  */
 @media screen and (max-width: 380px) {
+    .search-area{
+        width: 270px;
+    }
+    .search{
+        width: 240px;
+    }
     /* главная */
     .main-image{
         width: 350px;
     }
 
+    #mens, #womens, #boys, #girls{
+        font-size: 20px;
+    }
+
+    .more a{
+        margin-left: 20px;
+        font-size: 18px;
+        height: 35px;
+    }
+
+    .name{
+        font-size: 18px;
+    }
     /* ab us */
     .about-content{
         height: 100px;
@@ -612,7 +807,6 @@
     }
 
     .under1::after{
-        width: 70px;
     }
 
     .under2::after{
@@ -620,7 +814,6 @@
     }
 
     .under3::after{
-        width: 60px;
         left: 28px;
     }
 
@@ -639,46 +832,42 @@
     .icon-block > figure > a > img {
         max-width: 15px;
     }
-
+    .left-side{
+    width: 35%;
+    }
     .input-area {
         border-radius: 22px;
         font-size: 9px;
-        font-family: "Cinzel";
-        width: 120%;
-        height: 30px;
+        width: 90%;
+        height: 22px;
         padding-right: 15px; 
         padding-left: 15px;
         box-sizing: border-box;
+        margin-left: 20px;
     }
 
     .send-email {
-        width: 10px;
-        height: 10px;
-        font-size: 10px;
+        width: 7px;
+        height: 7px;
+        font-size: 9px;
         left: 90%;
     }
 }
 
 
-@media screen and (max-width: 425px) {
-
-    #mens, #womens, #boys, #girls{
-        font-size: 24px;
+@media screen and (max-width: 342px) {
+    .search-area{
+        width: 250px;
+    }
+    .search{
+        width: 220px;
+        margin-left: 5px;
     }
 
-
-}
-
-@media screen and (max-width: 320px) {
-
-    #mens, #womens, #boys, #girls{
-        font-size: 20px;
+    .image-title{
+        max-width: 120px;
+        margin-left: 40px;
     }
-
-
-}
-
-@media screen and (max-width: 340px) {
     /* главная */
     .main-image{
         width: 320px;
@@ -688,8 +877,21 @@
         width: 300px;
     }    
 
-   
-}    
+    .under3::after{
+        left: 24px;
+    }
+
+    .under2::after{
+        width: 40px;
+    }
+
+    .footer-block-title{
+            font-size: 8px;
+        }
+
+}  
+
+
 
 @media screen and (max-width: 321px) {
     /* главная */
@@ -700,5 +902,26 @@
     .model{
         width: 300px;
     }    
+
+    #mens, #womens, #boys, #girls{
+        font-size: 18px;
+    }
+
+    .under1::after{
+        width: 82px;
+    }
+
+    .under3::after{
+        left: 20px;
+        width: 82px;
+    }
+
+    .under2::after{
+        width: 40px;
+    }
+
+    .footer-block-title{
+        font-size: 7px;
+    }
 }    
 

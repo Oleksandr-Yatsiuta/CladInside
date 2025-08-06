@@ -14,6 +14,14 @@ a {
     text-decoration: none;
 }
 
+h1 {
+    margin: 0;
+    font-size: 55px;
+    line-height: 74px;
+    letter-spacing: 0.08em;
+    color: #ffffff;
+}
+
 
 .block1{
     display: block;
@@ -96,6 +104,12 @@ a {
     font-size: 15px;
 }
 
+.search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
 .fa-search {
     position: relative;
     float: left;
@@ -105,6 +119,11 @@ a {
     margin-left: 5px;
     font-size: 21px;
     color: #5f5f5f;
+}
+
+#search-icon{   
+    margin-bottom: 8px;
+    z-index: 11;
 }
 
 .fa-search + .search {
@@ -255,6 +274,7 @@ a {
 /* конец главной */
 
 .container-main {
+    position: relative;
     text-align: center;
     padding: 20px 0;
     margin: 0 auto;
@@ -266,36 +286,65 @@ a {
     width: 1200px;
     letter-spacing: 00.08em;
 }
+  
+  .custom-prev,
+  .custom-next {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    font-size: 100px;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+  
+  .custom-prev:hover,
+  .custom-next:hover {
+    opacity: 1;
+  }
+  
+  .custom-prev {
+    left: -70px;
+  }
+  
+  .custom-next {
+    right: -70px;
+  }
+  
 
 .owl {
     color: #fff;
 }
 
-h1 {
-    padding-left: 10%;
-    margin: 0%;
-    font-size: 55px;
-    line-height: 74px;
-    letter-spacing: 0.08em;
-    color: #ffffff;
+.item{
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: start;
+    align-items: baseline;
+    justify-content: flex-start;
 }
 
 .name {
     font-family: "Cinzel";
     display: inline-block;
-    padding-right: 70px;
-    margin: 0%;
     font-size: 30px;
+    width: 100%;
 }
 
 .more {
-    width: 100%;
+    align-items: baseline;
     display: flex;
+    padding-left: 5%;
 }
 
 .stars {
     display: inline-block;
     font-size: 30px;
+    margin-left: 10px;
 }
 
 .more a {
@@ -303,44 +352,26 @@ h1 {
     text-decoration: none;
     font-family: "Shadows Into Light";
     cursor: pointer;
-    width: 100px;
+    width: 120px;
+    margin-left: 10px;
     background-color: #161616;
     border-radius: 20px;
     font-size: 35px;
-    line-height: 58px;
+    line-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-/* !такие стили можно записать через кому .owl1 , .owl2 {...} и они мешают сделать тёмную тему  */
-/* .owl1 {
-    
-    color: #fff;
-    background-color: #000;
-    padding-top: 130px;
-} */
 
-/* .owl2 {
+.owl4 , .owl2 , .owl3 , .owl {
     color: #fff;
-    background-color: #000;
-    padding-top: 130px;
-} */
-
-/* .owl3 {
-    color: #fff;
-    background-color: #000;
-    padding-top: 130px;
-} */
-
-/* .owl4 {
-    color: #fff;
-    background-color: #000;
-    padding-top: 130px;
-} */
+    padding-top: 100px;
+}
 
 .cost {
     font-family: "Shadows Into Light";
     font-size: 40px;
     line-height: 68px;
-    margin-right: 70px;
-    text-align: end;
     color: rgba(255, 255, 255, 0.65);
 }
 
@@ -348,7 +379,7 @@ h1 {
     display: none;
     position: fixed;
     bottom: 20px;
-    right: 30px;
+    right: 10px;
     z-index: 99;
     border: none;
     outline: none;
@@ -380,6 +411,7 @@ h1 {
 .title {
     font-size: 55px;
     margin-bottom: 50px;
+    text-align: center;
 }
 
 .about-page-contain {
@@ -580,8 +612,8 @@ h1 {
 #themes {
     z-index: 99;
     position: fixed;
-    bottom: 20px;
-    left: 30px;
+    bottom: 10px;
+    left: 10px;
     border: none;
     outline: none;
     background: transparent;
@@ -590,7 +622,13 @@ h1 {
     font-size: 10px;
     height: 60px;
     width: 60px;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+
 
 .fa-sun {
     width: 50px;
@@ -721,50 +759,4 @@ ul li:hover .dropOut {
     height: 300px;
     z-index: 3;
     background-color: black;
-}
-@media screen and (max-width: 767px) {
-    .search {
-        display: none;
-    }
-
-    .call-icon {
-        display: block;
-    }
-
-    .left-side-header{
-        width: 57%;
-    }
-
-    .image-title{
-        margin-left: 25px;
-        z-index: 41000;
-    }
-    /* !burger */
-
-    .left-side-header {
-        flex-direction: row-reverse;
-    }
-
-    .menu {
-        display: none;
-    }
-
-    .burger {
-        width: 30px;
-        height: 30px;
-        background: url("img/icons/menu.png");
-        background-size: contain;
-        background-color: white;
-        transition: 0.3s all linear;
-        cursor: pointer;
-        z-index: 4;
-    }
-
-    .burger_active {
-        width: 30px;
-        height: 30px;
-        background: url("img/icons/close.png");
-        background-size: contain;
-        background-color: white;
-    }
 }

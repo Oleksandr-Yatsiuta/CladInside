@@ -13,12 +13,8 @@ Burger.addEventListener("click", () => {
 		Burger.classList.add("burger_active");
 		BurgerMenu.style.display = "block";
 	}
-// !зробити css класс
-// !використати toggle
 })
 
-// (function () {
-// }());
 
 
 

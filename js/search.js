@@ -1,6 +1,6 @@
 let area = document.querySelector(".search-area");
 let search = document.querySelector(".search");
-let icon = document.querySelector(".fa-search");
+let icon = document.getElementById("search-icon");
 let noResults = document.querySelector(".no-results");
 
 // Функція для відкриття пошуку
@@ -47,6 +47,7 @@ document.addEventListener('click', function(event) {
         if (!area.contains(event.target) && 
             !search.contains(event.target) && 
             !icon.contains(event.target)) {
+            search.classList.remove("active");
             closeSearch();
 			search.value = "";
             search.blur();
@@ -58,6 +59,7 @@ document.addEventListener('click', function(event) {
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         closeSearch();
+        search.classList.remove("active");
         if (search) {
             search.value = "";
             search.blur();
@@ -105,3 +107,15 @@ if (elasticInput) {
         }
     }
 }
+
+icon.addEventListener("click", () => {
+    search.classList.toggle("active");
+
+    if (search.classList.contains("active")) {
+        search.focus();
+    } else {
+        search.blur();
+        search.value = "";
+    }
+});
+  
